@@ -1058,11 +1058,12 @@ new Vue({
 
         dateSet() {
             // this.filter2.dateFrom = moment(this.filter.dateFrom).subtract(1, 'd').format("YYYY-MM-DD");
-            this.filter2.dateTo = moment(this.filter.dateTo).subtract(1, 'd').format("YYYY-MM-DD");
+            this.filter2.dateTo = moment(this.filter.dateFrom).subtract(1, 'd').format("YYYY-MM-DD");
             this.getStatements_2();
         },
 
         getStatements() {
+            console.log(this.filter2);
             this.getSales();
             this.getPurchases();
             this.getReceivedFromCustomers();
@@ -1080,6 +1081,7 @@ new Vue({
             this.getEmployeePayments();
             this.getAssetsCost();
             this.getAssetsSales();
+            this.dateSet();
         },
 
         getStatements_2() {
