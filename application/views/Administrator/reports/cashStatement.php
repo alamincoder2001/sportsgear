@@ -1063,7 +1063,7 @@ new Vue({
         },
 
         getStatements() {
-            console.log(this.filter2);
+            this.dateSet();
             this.getSales();
             this.getPurchases();
             this.getReceivedFromCustomers();
@@ -1081,7 +1081,6 @@ new Vue({
             this.getEmployeePayments();
             this.getAssetsCost();
             this.getAssetsSales();
-            this.dateSet();
         },
 
         getStatements_2() {
